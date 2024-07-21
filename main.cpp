@@ -28,9 +28,9 @@ int main() {
                 break;
             case 2:
                 system("cls");
-                eliminarSerie(series,n);
+                //eliminarSerie(series,n);
                 cout<<"La lista despues de eliminar es: \n";
-                mostrarLista(series,n);
+                //mostrarLista(series,n);
                 system("pause");
                 break;
             case 3:
@@ -38,7 +38,7 @@ int main() {
                 if(n==-1){
                     cout<<"No hay series registradas...\n";    
                 }else{
-                    mostrarLista(series,n);
+                    //mostrarLista(series,n);
                     cout<<endl;
                 }
                 system("pause");
@@ -49,7 +49,7 @@ int main() {
                     cout<<"No hay series registradas...\n";
                 }else{
                     cout<<"El listado de series existentes, ordenado por plataforma es:\n\n";
-                    mostrarListaPorPlataforma(series,n);
+                    //mostrarListaPorPlataforma(series,n);
                 }
                 system("pause");
                 break;
