@@ -1,6 +1,6 @@
 #include <iostream>
 #include"SerieTV.h"
-
+using namespace std;
 int main() {
 	SerieTV series[30];
 	int op;
