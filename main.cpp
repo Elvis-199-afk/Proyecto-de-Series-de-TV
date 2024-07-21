@@ -1,7 +1,10 @@
 #include <iostream>
+#include"SerieTV.h"
 
 int main() {
+	SerieTV series[30];
 	int op;
+	
     do{
         system("cls");
         cout<<"=== GESTION DE SERIES DE TELEVISION ===\n\n";
@@ -11,6 +14,7 @@ int main() {
         cout<<" 4. Mostrar lista de series ordenadas por plataforma\n";
         cout<<" 5. Salir del programa\n\n";
         cout<<"== SELECCIONA UNA DE LAS OPCIONES ==\n";
+        int n=0;
         cin>>op;
         
         switch (op){
