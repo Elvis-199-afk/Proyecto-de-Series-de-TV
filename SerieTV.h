@@ -9,5 +9,5 @@ struct SerieTV {
 };
 
 void agregarSerie(SerieTV series[], int &n);
-void mostrarLista(SerieTV *series, int n);
+
 #endif
