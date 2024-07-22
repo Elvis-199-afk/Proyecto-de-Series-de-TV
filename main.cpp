@@ -47,7 +47,7 @@ int main() {
                     cout<<"No hay series registradas...\n";
                 }else{
                     cout<<"El listado de series existentes, ordenado por plataforma es:\n\n";
-                    //mostrarListaPorPlataforma(series,n);
+                    mostrarListaPorPlataforma(series,n);
                 }
                 system("pause");
                 break;
