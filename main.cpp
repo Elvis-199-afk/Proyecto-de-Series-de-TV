@@ -26,9 +26,9 @@ int main() {
                 break;
             case 2:
                 system("cls");
-                //eliminarSerie(series,n);
+                eliminarSerie(series,n);
                 cout<<"La lista despues de eliminar es: \n";
-                //mostrarLista(series,n);
+                mostrarLista(series,n);
                 system("pause");
                 break;
             case 3:
