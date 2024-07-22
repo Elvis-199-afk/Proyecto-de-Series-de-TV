@@ -3,8 +3,8 @@
 using namespace std;
 int main() {
 	SerieTV series[30];
-	int op;
-	
+    int op;
+    int n=-1;
     do{
         system("cls");
         cout<<"=== GESTION DE SERIES DE TELEVISION ===\n\n";
@@ -14,9 +14,7 @@ int main() {
         cout<<" 4. Mostrar lista de series ordenadas por plataforma\n";
         cout<<" 5. Salir del programa\n\n";
         cout<<"== SELECCIONA UNA DE LAS OPCIONES ==\n";
-        int n=0;
         cin>>op;
-        
         switch (op){
             case 1:
                 system("cls");
@@ -38,7 +36,7 @@ int main() {
                 if(n==-1){
                     cout<<"No hay series registradas...\n";    
                 }else{
-                    //mostrarLista(series,n);
+                	mostrarLista(series,n);
                     cout<<endl;
                 }
                 system("pause");
@@ -61,7 +59,7 @@ int main() {
                 system("pause");
                 break;
         }
-    } while(op != 5);
+	} while(op != 5);
 
 	return 0;
 }
