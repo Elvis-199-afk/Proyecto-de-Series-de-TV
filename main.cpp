@@ -2,6 +2,7 @@
 #include"SerieTV.h"
 using namespace std;
 int main() {
+	setlocale(LC_ALL, "");// agregando funcion que permite el mostrar caracteres especiales
 	SerieTV series[30]={
         {"Stranger Things", "Ciencia Ficcion", 2016, 4, "Netflix"},
         {"The Mandalorian", "Aventura", 2019, 2, "Disney+"},
