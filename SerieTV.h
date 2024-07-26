@@ -12,4 +12,5 @@ void agregarSerie(SerieTV series[], int &n);
 void eliminarSerie(SerieTV *series, int &n);
 void mostrarLista(SerieTV *series, int n);
 void mostrarListaPorPlataforma(SerieTV series[], int n);
+//int mostrarMenu(const char *titulo, const string opciones[], int n) //no se si agregar aqui no es un void
 #endif
