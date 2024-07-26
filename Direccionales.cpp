@@ -3,6 +3,7 @@
 #include<string.h>
 #include<conio.h> //permite usar getch()
 #include"SerieTV.h"
+using namespace std;
 
 // este primer codigo se usa para mover la flechita
 int mostrarMenu(const char *titulo, const string opciones[], int n) {  
