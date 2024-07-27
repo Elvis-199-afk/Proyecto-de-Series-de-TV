@@ -3,7 +3,7 @@
 #include"SerieTV.h"
 using namespace std;
 int main() {
-	//void menu_inicial() ¿como hacemos?
+	// menu_inicial(); //¿como hacemos? verifica la funcionalidad
 	
 	setlocale(LC_ALL, "");// agregando funcion que permite el mostrar caracteres especiales
 	SerieTV series[30]={
