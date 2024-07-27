@@ -1,0 +1,19 @@
+#include<iostream>
+#include<iomanip>
+#include<string.h>
+#include"SerieTV.h"
+
+void Ingresando_al_sistema() {
+	string supemail;
+	int supcontra;
+	cout << "\tVerificando su identificación\n";
+	cout << "Email: ";
+	cin >> supemail;
+	cout << "Contraseña: ";
+	cin >> supcontra;
+	if (supcontra == 123456789) {
+		tecnico();
+	} else {
+		cout << "Usted no es parte tecnica, por favor de retirarse\n";
+	}
+}
