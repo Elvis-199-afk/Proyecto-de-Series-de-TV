@@ -23,7 +23,7 @@ void menu_inicial() {
 				break;
 			case 2:
 				system("cls");
-				//Ingresando_al_sistema();
+				Ingresando_al_sistema();
 				break;
 			case 3:
 				repite = false;
