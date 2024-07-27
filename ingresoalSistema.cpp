@@ -2,6 +2,7 @@
 #include<iomanip>
 #include<string.h>
 #include"SerieTV.h"
+using namespace std;
 
 void Ingresando_al_sistema() {
 	string supemail;
