@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o AgregarSerie.o EliminarSerie.o MostrarLista.o MostrarListaporPlataforma.o
-LINKOBJ  = main.o AgregarSerie.o EliminarSerie.o MostrarLista.o MostrarListaporPlataforma.o
+OBJ      = main.o AgregarSerie.o EliminarSerie.o MostrarLista.o MostrarListaporPlataforma.o FuncionesUsuario.o menuTecnico.o Series.o Usuarios.o
+LINKOBJ  = main.o AgregarSerie.o EliminarSerie.o MostrarLista.o MostrarListaporPlataforma.o FuncionesUsuario.o menuTecnico.o Series.o Usuarios.o
 LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
@@ -38,3 +38,15 @@ MostrarLista.o: MostrarLista.cpp
 
 MostrarListaporPlataforma.o: MostrarListaporPlataforma.cpp
 	$(CPP) -c MostrarListaporPlataforma.cpp -o MostrarListaporPlataforma.o $(CXXFLAGS)
+
+FuncionesUsuario.o: FuncionesUsuario.cpp
+	$(CPP) -c FuncionesUsuario.cpp -o FuncionesUsuario.o $(CXXFLAGS)
+
+menuTecnico.o: menuTecnico.cpp
+	$(CPP) -c menuTecnico.cpp -o menuTecnico.o $(CXXFLAGS)
+
+Series.o: Series.cpp
+	$(CPP) -c Series.cpp -o Series.o $(CXXFLAGS)
+
+Usuarios.o: Usuarios.cpp
+	$(CPP) -c Usuarios.cpp -o Usuarios.o $(CXXFLAGS)

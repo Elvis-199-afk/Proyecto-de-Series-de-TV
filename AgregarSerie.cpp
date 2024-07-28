@@ -1,21 +1,25 @@
+#include"SerieTV.h"
 #include<iostream>
 #include<iomanip>
-#include<string.h>
-#include"SerieTV.h"
+#include<string>
 using namespace std;
-void agregarSerie(SerieTV series[], int &n){
-    n++;
-    cin.ignore();
-    cout<<"Ingrese el titulo de la serie: ";
-    cin.getline(series[n].titulo, 100);
-    cout<<"Ingrese el genero de la serie: ";
-    cin.getline(series[n].genero, 50);
-    cout<<"Ingrese el anio de estreno: ";
-    cin>>series[n].anio;
-    cout<<"Ingrese el numero de temporadas: ";
-    cin>>series[n].temporadas;
-    cin.ignore();
-    cout<<"Ingrese la plataforma de streaming: ";
-    cin.getline(series[n].plataforma, 50);
+void agregarSerie(Serie series[],int &n){
+	if(n<50){
+		cout<<"\nNombre de la serie: ";
+	    cin.ignore();
+	    getline(cin,series[n].nombre);
+	    cout<<"Genero: ";
+	    getline(cin,series[n].genero);
+	    cout<<"Anio de estreno: ";
+	    cin>>series[n].anioEstreno;
+	    cout<<"Valoracion: ";
+	    cin>>series[n].valoracion;
+	    cout<<"Plataforma: ";
+	    cin.ignore();
+	    getline(cin,series[n].plataforma);
+	    n++;
+	    cout<<"Se agrego correctamente\n\n";
+	}else{
+        cout<<"No se pueden agregar mas series. Capacidad maxima alcanzada.\n\n";
+	} 
 }
-

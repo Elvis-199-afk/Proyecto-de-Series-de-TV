@@ -1,76 +1,39 @@
+#include"SerieTV.h"
 #include<iostream>
 #include<iomanip>
-#include<string.h>
-#include"SerieTV.h"
+#include<string>
 using namespace std;
-int main() {
-	SerieTV series[30]={
-        {"Stranger Things", "Ciencia Ficcion", 2016, 4, "Netflix"},
-        {"The Mandalorian", "Aventura", 2019, 2, "Disney+"},
-        {"The Boys", "Accion", 2019, 3, "Amazon Prime"},
-        {"Breaking Bad", "Drama", 2008, 5, "Netflix"},
-        {"The Crown", "Historia", 2016, 4, "Netflix"},
-        {"The Marvelous Mrs. Maisel", "Comedia", 2017, 4, "Amazon Prime"},
-        {"WandaVision", "Superheroes", 2021, 1, "Disney+"},
-        {"The Expanse", "Ciencia Ficcion", 2015, 6, "Amazon Prime"}
-    };
-    int n=7;
-    int op;
-    do{
+int main(){
+	int opcion;
+    do{	
         system("cls");
-        cout<<"=== GESTION DE SERIES DE TELEVISION ===\n\n";
-        cout<<" 1. Agregar serie\n";
-        cout<<" 2. Eliminar serie\n";
-        cout<<" 3. Mostrar lista general de series registradas\n";
-        cout<<" 4. Mostrar lista de series ordenadas por plataforma\n";
-        cout<<" 5. Salir del programa\n\n";
-        cout<<"== SELECCIONA UNA DE LAS OPCIONES ==\n";
-        cin>>op;
-        
-        switch (op){
+        cout<<"Menu Principal"<<endl;
+        cout<<"1. Cliente"<<endl;
+        cout<<"2. Tecnico"<<endl;
+        cout<<"3. Salir"<<endl;
+        cout<<"Seleccione una opcion: ";
+        cin>>opcion;
+        switch(opcion){
             case 1:
-                system("cls");
-                if(n==30){
-                    cout<<"Se ha llegado al limite de series\n";
-                }else{
-                    agregarSerie(series,n);
-                }
+            	system("cls");
+                menuCliente();
                 break;
             case 2:
-                system("cls");
-                eliminarSerie(series,n);
-                cout<<"La lista despues de eliminar es: \n";
-                mostrarLista(series,n);
-                system("pause");
-                break;
-            case 3:
-                system("cls");
-                if(n==-1){
-                    cout<<"No hay series registradas...\n";    
+            	system("cls");
+                if(iniciarSesionTecnico()){
+                    menuTecnico();
                 }else{
-                    mostrarLista(series,n);
-                    cout<<endl;
+                    cout<<"Acceso denegado."<<endl;
+                    system("pause");
                 }
-                system("pause");
                 break;
-            case 4:
-                system("cls");
-                if(n==-1){
-                    cout<<"No hay series registradas...\n";
-                }else{
-                    cout<<"El listado de series existentes, ordenado por plataforma es:\n\n";
-                    mostrarListaPorPlataforma(series,n);
+            default:
+                if(opcion!=3){
+                    cout<<"Ingrese una opcion valida\n\n";
                 }
-                system("pause");
-                break;
-            case 5:
-                cout<<"\nFIN . . .\n";
-                break;
-            default :
-                cout<<"\n\nINGRESE UNA OPCION VALIDA\n";
                 system("pause");
                 break;
         }
-    } while(op != 5);
-	return 0;
+    }while(opcion!=3);
+    return 0;
 }

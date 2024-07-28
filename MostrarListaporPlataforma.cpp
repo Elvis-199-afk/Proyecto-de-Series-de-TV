@@ -1,47 +1,23 @@
+#include"SerieTV.h"
 #include<iostream>
 #include<iomanip>
-#include<string.h>
-#include"SerieTV.h"
+#include<string>
 using namespace std;
-void mostrarListaPorPlataforma(SerieTV series[], int n){
-    cout<<"Netflix: "<<endl;
-    for(int i=0;i<=n;i++){
-        if (strcmp(series[i].plataforma,"Netflix")==0) {
-            cout<<setw(30)<<series[i].titulo;
-            cout<<setw(20)<<series[i].genero;
-            cout<<setw(10)<<series[i].anio;
-            cout<<setw(15)<<series[i].temporadas;
-            cout<<setw(30)<<series[i].plataforma<<endl;
+void mostrarSeriesPorPlataforma(){
+    string plataforma;
+    bool encontrar=false;
+    cout<<"Ingrese la plataforma: ";
+    cin.ignore();
+    getline(cin,plataforma);
+    cout<<left<<setw(35)<<"\nNombre"<<setw(20)<<"Genero"<<setw(15)<<"Anio"<<setw(15)<<"Valoracion"<<setw(15)<<"Plataforma"<<endl<<endl;
+    for(int i=0;i<n;i++){
+        if(series[i].plataforma==plataforma){
+            cout<<left<<setw(35)<<series[i].nombre<<setw(20)<<series[i].genero<<setw(15)<<series[i].anioEstreno<<setw(15)<<series[i].valoracion<<setw(15)<<series[i].plataforma<<endl;
+            encontrar=true;
         }
     }
-    cout<<"\nAmazon Prime: "<<endl;
-    for(int i=0;i<=n;i++){
-        if (strcmp(series[i].plataforma,"Amazon Prime")==0) {
-            cout<<setw(30)<<series[i].titulo;
-            cout<<setw(20)<<series[i].genero;
-            cout<<setw(10)<<series[i].anio;
-            cout<<setw(15)<<series[i].temporadas;
-            cout<<setw(30)<<series[i].plataforma<<endl;
-        }
+    if(encontrar==false){
+        cout<<"No se encontro una serie para la plataforma.\n";
     }
-    cout<<"\nDisney+: "<<endl;
-    for(int i=0;i<=n;i++){
-        if (strcmp(series[i].plataforma,"Disney+")==0) {
-            cout<<setw(30)<<series[i].titulo;
-            cout<<setw(20)<<series[i].genero;
-            cout<<setw(10)<<series[i].anio;
-            cout<<setw(15)<<series[i].temporadas;
-            cout<<setw(30)<<series[i].plataforma<<endl;
-        }
-    }
-    cout<<"\nOtras plataformas: "<<endl;
-    for(int i=0;i<=n;i++){
-        if (strcmp(series[i].plataforma,"Netflix")!=0 && strcmp(series[i].plataforma,"Amazon Prime")!=0 && strcmp(series[i].plataforma,"Disney+")!= 0){
-            cout<<setw(30)<<series[i].titulo;
-            cout<<setw(20)<<series[i].genero;
-            cout<<setw(10)<<series[i].anio;
-            cout<<setw(15)<<series[i].temporadas;
-            cout<<setw(30)<<series[i].plataforma << endl;
-        }
-    }
+    cout<<endl;
 }

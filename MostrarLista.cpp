@@ -1,15 +1,12 @@
+#include"SerieTV.h"
 #include<iostream>
 #include<iomanip>
-#include<string.h>
-#include"SerieTV.h"
+#include<string>
 using namespace std;
-void mostrarLista(SerieTV *series, int n){
-    cout<<left<<setw(30)<<"TITULO"<<setw(20)<<"GENERO"<<setw(10)<<"ANIO"<<setw(15)<<"TEMPORADAS"<<setw(30)<<"PLATAFORMA"<<endl<<endl;
-    for(int i=0; i <= n; i++){
-        cout<<setw(30)<<series[i].titulo;
-        cout<<setw(20)<<series[i].genero;
-        cout<<setw(10)<<series[i].anio;
-        cout<<setw(15)<<series[i].temporadas;
-        cout<<setw(30)<<series[i].plataforma<<endl;
+void mostrarSeries(Serie series[],int &n){
+    cout<<endl<<left<<setw(35)<<"Nombre"<<setw(20)<<"Genero"<<setw(15)<<"Anio"<<setw(15)<<"Valoracion"<<setw(15)<<"Plataforma"<<endl<<endl;
+    for(int i=0;i<n;i++){
+        cout<<left<<setw(35)<<series[i].nombre<<setw(20)<<series[i].genero<<setw(15)<<series[i].anioEstreno<<setw(15)<<series[i].valoracion<<setw(10)<<series[i].plataforma<<endl;
     }
+    cout<<endl;
 }

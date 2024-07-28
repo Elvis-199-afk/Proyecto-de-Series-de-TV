@@ -1,18 +1,28 @@
+#include"SerieTV.h"
 #include<iostream>
 #include<iomanip>
-#include<string.h>
-#include"SerieTV.h"
+#include<string>
 using namespace std;
-void eliminarSerie(SerieTV *series, int &n){
-    int indice;
-    cout << "Lista de series:\n";
-    for(int i=0;i<=n;i++){
-        cout<<i+1<<". "<<series[i].titulo<<endl;
+void eliminarSerie(){
+    string nombre;
+    cout<<"\nNombre de la serie a eliminar: ";
+    cin.ignore();
+    getline(cin,nombre);
+    bool encontrada=false;
+    for(int i=0;i<n;i++){
+        if(series[i].nombre==nombre){
+            for(int j=i;j<n-1;j++){
+                series[j]=series[j+1];
+            }
+        	n--;
+            encontrada=true;
+        	break;
+    	}
     }
-    cout<<"Ingrese el numero de la posicion de la serie que desea eliminar: ";
-    cin>>indice;
-    for(int i=indice-1;i<n;i++){
-        series[i]=series[i+1];
+    if(encontrada){
+        cout<<"Serie eliminada correctamente"<<endl;
+    }else{
+        cout<<"Serie no encontrada"<<endl;
     }
-    n--;
+    cout<<endl;
 }
