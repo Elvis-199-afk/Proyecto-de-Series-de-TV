@@ -7,10 +7,10 @@ using namespace std;
 void Ingresando_al_sistema() {
 	string supemail;
 	int supcontra;
-	cout << "\tVerificando su identificación\n";
+	cout << "\tVerificando su identificaciÃ³n\n";
 	cout << "Email: ";
 	cin >> supemail;
-	cout << "Contraseña: ";
+	cout << "ContraseÃ±a: ";
 	cin >> supcontra;
 	if (supcontra == 123456789) {
 		tecnico();
