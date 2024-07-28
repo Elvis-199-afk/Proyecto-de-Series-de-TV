@@ -3,7 +3,7 @@
 #include"SerieTV.h"
 using namespace std;
 int main() {
-	// menu_inicial(); //¿como hacemos? verifica la funcionalidad
+	// menu_inicial(); //Â¿como hacemos? verifica la funcionalidad
 	
 	setlocale(LC_ALL, "");// agregando funcion que permite el mostrar caracteres especiales
 	SerieTV series[30]={
@@ -20,24 +20,12 @@ int main() {
     int n=7;
     do{
         system("cls");
-        //eliminas todo
-        cout<<"=== GESTION DE SERIES DE TELEVISION ===\n\n";
-        cout<<" 1. Agregar serie\n";
-        cout<<" 2. Eliminar serie\n";
-        cout<<" 3. Mostrar lista general de series registradas\n";
-        cout<<" 4. Mostrar lista de series ordenadas por plataforma\n";
-        cout<<" 5. Salir del programa\n\n";
-        cout<<"== SELECCIONA UNA DE LAS OPCIONES ==\n";
-        cin>>op;
-        //hasta aqui y lo remplazas por lo otro
-        /*
         const char *titulo = {"GESTION DE SERIES DE TELEVISION"};
 		string opciones[] = {"Agregar serie", "Eliminar serie", "Mostrar lista general de series registradas", 
 		"Mostrar lista de series ordenadas por plataforma", 
 		"Salir del programa"};
 		int n = 5; // esto se modifica dependiendo de la cantidad de opciones
 		op = mostrarMenu(titulo, opciones, n);	
-		*/
         
         
         
