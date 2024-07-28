@@ -19,7 +19,7 @@ void menu_inicial() {
 		switch (opcion) {
 			case 1:
 				system("cls");
-				nuevo_cliente();
+				void nuevo_cliente();
 				break;
 			case 2:
 				system("cls");

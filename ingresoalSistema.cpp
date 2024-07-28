@@ -13,7 +13,7 @@ void Ingresando_al_sistema() {
 	cout << "Contraseña: ";
 	cin >> supcontra;
 	if (supcontra == 123456789) {
-		tecnico();
+		void tecnico();
 	} else {
 		cout << "Usted no es parte tecnica, por favor de retirarse\n";
 	}

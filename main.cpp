@@ -1,5 +1,4 @@
 #include <iostream>
-#include<conio.h> //prueba si se puede sin esto
 #include"SerieTV.h"
 using namespace std;
 int main() {
