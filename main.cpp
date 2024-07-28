@@ -1,10 +1,9 @@
-#include <iostream>
+#include<iostream>
+#include<iomanip>
+#include<string.h>
 #include"SerieTV.h"
 using namespace std;
 int main() {
-	// menu_inicial(); //¿como hacemos? verifica la funcionalidad
-	
-	setlocale(LC_ALL, "");// agregando funcion que permite el mostrar caracteres especiales
 	SerieTV series[30]={
         {"Stranger Things", "Ciencia Ficcion", 2016, 4, "Netflix"},
         {"The Mandalorian", "Aventura", 2019, 2, "Disney+"},
@@ -14,19 +13,19 @@ int main() {
         {"The Marvelous Mrs. Maisel", "Comedia", 2017, 4, "Amazon Prime"},
         {"WandaVision", "Superheroes", 2021, 1, "Disney+"},
         {"The Expanse", "Ciencia Ficcion", 2015, 6, "Amazon Prime"}
-	};
-    int op;
+    };
     int n=7;
+    int op;
     do{
         system("cls");
-        const char *titulo = {"GESTION DE SERIES DE TELEVISION"};
-		string opciones[] = {"Agregar serie", "Eliminar serie", "Mostrar lista general de series registradas", 
-		"Mostrar lista de series ordenadas por plataforma", 
-		"Salir del programa"};
-		int n = 5; // esto se modifica dependiendo de la cantidad de opciones
-		op = mostrarMenu(titulo, opciones, n);	
-        
-        
+        cout<<"=== GESTION DE SERIES DE TELEVISION ===\n\n";
+        cout<<" 1. Agregar serie\n";
+        cout<<" 2. Eliminar serie\n";
+        cout<<" 3. Mostrar lista general de series registradas\n";
+        cout<<" 4. Mostrar lista de series ordenadas por plataforma\n";
+        cout<<" 5. Salir del programa\n\n";
+        cout<<"== SELECCIONA UNA DE LAS OPCIONES ==\n";
+        cin>>op;
         
         switch (op){
             case 1:
@@ -49,7 +48,7 @@ int main() {
                 if(n==-1){
                     cout<<"No hay series registradas...\n";    
                 }else{
-                	mostrarLista(series,n);
+                    mostrarLista(series,n);
                     cout<<endl;
                 }
                 system("pause");
@@ -60,7 +59,7 @@ int main() {
                     cout<<"No hay series registradas...\n";
                 }else{
                     cout<<"El listado de series existentes, ordenado por plataforma es:\n\n";
-                	mostrarListaPorPlataforma(series,n);
+                    mostrarListaPorPlataforma(series,n);
                 }
                 system("pause");
                 break;
@@ -72,7 +71,6 @@ int main() {
                 system("pause");
                 break;
         }
-	} while(op != 5);
-
+    } while(op != 5);
 	return 0;
 }

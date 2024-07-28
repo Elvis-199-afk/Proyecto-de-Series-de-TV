@@ -1,4 +1,5 @@
 #include<iostream>
+#include<iomanip>
 #include<string.h>
 #include"SerieTV.h"
 using namespace std;
@@ -17,3 +18,4 @@ void agregarSerie(SerieTV series[], int &n){
     cout<<"Ingrese la plataforma de streaming: ";
     cin.getline(series[n].plataforma, 50);
 }
+

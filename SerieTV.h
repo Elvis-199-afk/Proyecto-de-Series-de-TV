@@ -7,13 +7,8 @@ struct SerieTV {
     int temporadas;
     char plataforma[50];
 };
-
 void agregarSerie(SerieTV series[], int &n);
 void eliminarSerie(SerieTV *series, int &n);
 void mostrarLista(SerieTV *series, int n);
 void mostrarListaPorPlataforma(SerieTV series[], int n);
-int mostrarMenu(const char *titulo, const std::string opciones[], int n); //no se si agregar aqui no es un void
-void menu_inicial();
-void Ingresando_al_sistema();
-void Ingresando_al_sistema();
 #endif

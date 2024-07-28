@@ -13,6 +13,6 @@ void eliminarSerie(SerieTV *series, int &n){
     cin>>indice;
     for(int i=indice-1;i<n;i++){
         series[i]=series[i+1];
-	}
-	n--;
+    }
+    n--;
 }
