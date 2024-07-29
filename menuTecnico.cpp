@@ -45,6 +45,12 @@ void menuTecnico(){
                 mostrarUsuariosRegistrados();
                 system("pause");
                 break;
+            default:
+            	if(opcion!=6){
+            		cout<<"\nIngrese una opcion valida.\n\n";
+            		system("pause");	
+				}
+            	break;
         }
     }while(opcion!=6);
 }
@@ -56,7 +62,7 @@ void menuCliente(){
         cout<<"Menu Cliente"<<endl;
         cout<<"1. Iniciar sesion"<<endl;
         cout<<"2. Registrarse"<<endl;
-        cout<<"3. Recuperar contraseña"<<endl;
+        cout<<"3. Recuperar contrasenia"<<endl;
         cout<<"4. Regresar"<<endl;
         cout<<"Seleccione una opcion: ";
         cin>>op;
@@ -114,9 +120,9 @@ void menuCliente(){
                 break;
             default:
                 if(op!=4){
-                    cout<<"Ingrese una opcion valida\n\n";
+                    cout<<"\nIngrese una opcion valida\n\n";
+                    system("pause");
                 }
-                system("pause");
                 break;
         }
     }while(op!=4);
