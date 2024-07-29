@@ -51,6 +51,7 @@ void registrarUsuario(){
     }
 }
 bool iniciarSesionCliente(Usuario &usuarioActual){
+	system("cls");
     string email,contra;
     cout<<"Email: ";
     cin>>email;
